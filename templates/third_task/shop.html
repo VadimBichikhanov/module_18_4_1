@@ -1,0 +1,11 @@
+{% extends 'third_task/base.html' %}
+
+{% block content %}
+<h1>Магазин</h1>
+<ul>
+    {% for item in items %}
+        <li>{{ item.name }} <button>Купить</button></li>
+    {% endfor %}
+</ul>
+<a href="{% url 'index' %}">Вернуться на главную</a>
+{% endblock %}
